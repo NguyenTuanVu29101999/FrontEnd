@@ -5,6 +5,7 @@ import { LoginComponent } from './user/login/login.component';
 import { RegistrationComponent } from './user/registration/registration.component';
 import { HomeComponent } from './home/home.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { CustomerComponent } from './customer/customer.component';
 import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
@@ -18,7 +19,7 @@ const routes: Routes = [
   },
 
   {path:'home',component:HomeComponent,canActivate:[AuthGuard]},
-  {path:'admin-panel',component:AdminPanelComponent,canActivate:[AuthGuard]}
+  {path:'admin-panel',component:AdminPanelComponent,canActivate:[AuthGuard]},
 ];
 
 @NgModule({

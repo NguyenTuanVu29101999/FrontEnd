@@ -40,11 +40,14 @@ export class LoginComponent implements OnInit {
       },
       err => {
         if (err.status == 400)
-          this.toastr.error('Incorrect username or password.', 'Authentication failed.');
+          console.log('Incorrect username or password.', 'Authentication failed.');
         else
           console.log(err);
       }
     );
   }
+
+
+
 
 }

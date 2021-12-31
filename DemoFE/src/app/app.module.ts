@@ -13,6 +13,8 @@ import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 import { UserService } from './shared/user.service';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { CustomerComponent } from './customer/customer.component';
+import { WeatherforeastComponent } from './weatherforeast/weatherforeast.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
     RegistrationComponent,
     UserComponent,
     HomeComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    CustomerComponent,
+    WeatherforeastComponent
   ],
   imports: [
     BrowserModule,
