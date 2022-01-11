@@ -1,3 +1,4 @@
+import { TokenStorageService } from './../services/token-storage.service';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../shared/user.service';
 import { Router } from '@angular/router';
@@ -9,13 +10,13 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private token:TokenStorageService) { }
 
   ngOnInit(): void {
   }
 
   logout(){
-    localStorage.removeItem('token');
+    this.token.logOut();
     this.router.navigateByUrl('/user/login');
   }
 

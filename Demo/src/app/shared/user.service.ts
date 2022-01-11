@@ -8,14 +8,25 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 })
 export class UserService {
 
-
   constructor(private http: HttpClient) { }
 
-  readonly authURL:string = 'https://localhost:44350/api/authenticate/';
+  // readonly authURL:string = 'https://localhost:44350/api/authenticate/';
 
-  readonly apiUser:string = 'https://localhost:44350/weatherforecast/';
+  readonly API_URL:string = 'https://localhost:44350/weatherforecast/';
 
-  login(formData:any) {
-    return this.http.post(this.authURL + 'Login', formData);
+  // login(formData:any): Observable<any> {
+  //   return this.http.post(this.authURL + 'Login', formData);
+  // }
+
+  getAdminBoard(): Observable<any> {
+    return this.http.get(this.API_URL + 'admin', { responseType: 'text' });
   }
+
+  getUserBoard(): Observable<any>{
+    return this.http.get(this.API_URL + 'customer', { responseType: 'text' });
+  }
+
+
+
+
 }
